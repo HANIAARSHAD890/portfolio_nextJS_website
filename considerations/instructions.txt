@@ -1,0 +1,166 @@
+PROJECT DETAILS I AM GIVING YOU : 
+MAKE SURE YOU TAKE ONLY THESE PROJECTS OKIEE
+
+ MCP Unified Server & Agentic Workflows
+Unified four projects into a single MCP-based agentic workflow system. Demonstrated coordinated multi-agent processing and presented at UET Open House Evaluation.
+DETAILS:  Scrum of Scrums Open House Evaluation —   ✅
+🚀 Project: MCP Server & Agentic Workflows (Scrum of Scrums)
+ A multi-system Software Project Management initiative executed using Agile Scrum of Scrums, where multiple independent Scrum teams were coordinated to deliver an integrated AI platform.
+
+🧭 From Vision to Multi-Team Backlog
+The high-level vision was translated into an executable Scrum of Scrums plan by:
+ ➤ Defining system-level epics spanning multiple teams
+ ➤ Breaking work into team-specific features and user stories
+ ➤ Identifying and tracking cross-team dependencies
+ ➤ Writing clear acceptance criteria for integrated deliverables
+ ➤ Maintaining a unified product backlog with team-level sprint backlogs
+
+🔁 Agile Execution — Scrum of Scrums
+The project was delivered through Scrum of Scrums, where each team ran its own Scrum while coordination occurred at the SoS level.
+ ➤ 3 one-week sprints executed in parallel
+ ➤ Regular Scrum of Scrums meetings for dependency resolution
+ ➤ Integrated sprint reviews focusing on system-wide outcomes
+ ➤ Incremental integration at the end of each sprint
+
+📊 SPM Metrics & Tracking
+Throughout the project, we actively monitored:
+ ➤ Sprint-wise velocity tracking across teams
+ ➤ Burndown charts at both team and SoS levels
+ ➤ Cross-team delivery predictability
+ ➤ Integration readiness at sprint boundaries
+
+📑 Scrum & PMI Practices Implemented
+To align Agile execution with PMI standards, the following artifacts were prepared and maintained:
+ ➤ Project Proposal & Scope Statement
+ ➤ Work Breakdown Structure (WBS)
+ ➤ Unified Product & Sprint Backlogs
+ ➤ Sprint Planning, Schedule, Review & Retrospective documents
+ ➤ Daily Scrum & Scrum of Scrums Minutes of Meeting (MoMs)
+ ➤ Risk Register with mitigation strategies
+ ➤ RACI Chart for role clarity
+ ➤ Resource, Talent & Skill Matrix
+
+🛠️ Management Tools
+➤ ClickUp ~ Backlog management and sprint planning
+➤ GitHub ~ Version control and collaboration
+➤ Google Meet ~ Coordination and reviews
+
+GITUB: https://github.com/AmirHashmi017/MCP-Server-And-LangGraph-Agent
+demo video: https://www.linkedin.com/posts/amirhashmi017_agenticai-mcp-langgraph-ugcPost-7415022930478399488-jYxw/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEaQiPMBZrv2NREqHpQqlYin1LZWCO5wFBU
+demo video for SMart ansering Reserach System :
+SMART ANSWERING Reserach System - RAG Chatbot
+Developed a research-based RAG chatbot that provides authentic, context-aware answers from verified research sources. The project followed software project management best practices.The project was presented on open house evaluation at UET lahore where different evaluators came and give their insights
+demo video : https://www.linkedin.com/posts/haniaarshad_fastapi-reactjs-agilescrum-ugcPost-7417251210849775616-mpjM/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEaQiPMBZrv2NREqHpQqlYin1LZWCO5wFBU
+github : https://github.com/Maryyam18/Smart-Research-Answering-System
+Explaination (uu can make it short as requied by the portfolio websits : " Project Demo  | Smart Answering Research System
+
+I’m excited to share the **demo video and completion** of our academic project Smart Answering Research System, successfully delivered using the *Agile Scrum methodology across 9 sprints** and presented during the *Open House evaluation*
+
+#🧩 Tech Stack Overview
+# 🔹 Backend
+*Python (FastAPI)*
+*Grobid* for extraction of research papers parsing
+*Gemini* for intelligent answering
+*Tavili* for web search.
+*Supabase* for database management
+*GitHub* for version control
+*Railway* for backend deployment
+
+#🔹 Frontend
+*React.js*
+* Deployed on *Vercel*
+
+## ✨ Core Features (4 Main Modules)
+🔍 Query Module
+* Simple Search:* concise 15–20 line answers
+* Deep Search:* detailed responses with *multiple academic references*
+
+🔐 Authentication Module
+* Secure user access and session handling
+
+🕘 History Module
+* Stores previous queries and responses for traceability
+
+🎙️ Voice Input Module
+* Enables hands-free query submission
+
+##⚙️ Agile Delivery & Evaluation
+* Completed in **9 Scrum sprints**
+ project artifacts relevant to Agile practices are shared here in this post 
+🔗https://lnkd.in/dZvSdX9e
+
+## 🤖 Advanced Integration
+This project also integrates **Agentic Workflows and MCP Server architecture**, developed collaboratively through **Scrum of Scrums** which is shared in these posts ")
+
+1- RecipeBytes- Mobile APP:
+git: https://github.com/HANIAARSHAD890/RecipeBytesV2-MobileApp
+demo : https://www.linkedin.com/posts/haniaarshad_recipebytes-mobile-app-ugcPost-7478639605601239040-wak4/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEaQiPMBZrv2NREqHpQqlYin1LZWCO5wFBU
+ RecipeBytes – Your Smart Kitchen Companion
+Excited to share RecipeBytes, a mobile application designed to make cooking smarter, easier, and more enjoyable. Whether you're discovering new recipes, planning your weekly meals, or getting AI-powered cooking assistance, RecipeBytes brings everything together in one seamless experience.
+✨ Features
+• Secure authentication and personalized user profiles
+• Create, edit, and manage recipes with a guided workflow
+• Upload recipe images from the camera, gallery, or URL
+• Browse, search, filter, like, and favorite community recipes
+• AI-powered recipe generation
+• Recipe extraction from images (OCR)
+• Import recipes from YouTube links
+• Smart ingredient-based recipe suggestions
+• Ingredient comparison (available vs. missing)
+• AI-powered nutrition analysis
+• Monthly meal planner with reminder notifications
+• Generated shopping lists for missing ingredients
+• Personal dashboard with recipe insights
+• Light & Dark mode support
+• Smart notifications and offline awareness
+🛠 Tech Stack
+• Language: Kotlin
+• Database: Firebase
+• AI Integration: LLaMA Model
+• Image Storage: Cloudinary
+
+for the pilgrim Hekth detector : description:"🕋 Pilgrim Health Predictor
+Excited to share our latest AI project 
+Project: Pilgrim Health Predictor - AI-Powered Health Monitoring System
+🎯 What it does: Predicts potential health conditions for pilgrims during Hajj & Umrah using machine learning, enabling proactive healthcare management.
+Key Technical Achievements:
+✅ Dataset Selection: Comprehensive Umrah or Hajj Crowd Mangement Dataset with features including environmental, personal, and situational factors
+✅ Model Development: Implemented Decision Tree algorithm achieving highest accuracy after comparative analysis with multiple ML algorithms
+✅ Feature Engineering: Advanced preprocessing with one-hot encoding, normalization, with categorical & numerical features
+✅ AI Integration: Seamlessly integrated Google Gemini API flash 2.0 for intelligent health advisory and personalized medical recommendations
+✅ Web Application: Built responsive Streamlit interface with real-time predictions and interactive user experience
+✅ Health Predictions: Successfully classifies conditions: Healthy, Dehydration, Heat Exhaustion, Heatstroke, Fatigue, and Injury risks
+Technical Stack:
+🔧 Python | Scikit-learn | Streamlit | Pandas | Google Gemini API | Joblib
+Impact: This system transforms reactive healthcare into predictive care for millions of pilgrims worldwide, potentially saving lives through early health risk detection."
+demo: https://www.linkedin.com/posts/haniaarshad_pilgrim-health-predictor-excited-to-share-activity-7334241158333628416-SgCN?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEaQiPMBZrv2NREqHpQqlYin1LZWCO5wFBU
+
+github: https://github.com/HANIAARSHAD890/ARHajj-Augmented-Reality-AI-for-Hajj-
+
+messify 
+https://github.com/HANIAARSHAD890/MobileAPP_Messify
+no demo 
+pic given in the images.
+
+NOTE: based on the project heirarchy you can even move the images from one folder to another based whatever feels corrected okie acc to the project heirarcy as i do consider image asssets must be in the assets folder 
+only these projects must be showcsed not anyother roject just these okiee.
+
+PROFILE_IMAGES: for the mage that is right on the top 1 , that is like the one is blur like when the curso gores there it becomes clera same thing you need to do with the second pic that is right there parallel to the profile section i.e ABOUT ME SECTION , if possiblemake the image a loittle bit smaller in size or do some bordering so that the actual image size descresaed , FOr the top image place profile_1 image , for the later on image place the profile_2 
+YOU CAN Chnage the place of the images or youi can move as per need of the poject as i do  consider that proepr heirrachy of the project involves the folder of the assets 
+
+SCROLL ICON BUG : the icon is too much at the top withthe icons of the linkedin . mail and the github such that the SCROLL word is ovcerlapped these icons , so improve the spaciong btetween the icons and the scroll 
+
+Remove the summers at the frontendof the portfolio and add something else ehich matches me okie , dont add Arshad NO.
+
+further for the address just add LADA AVenue -1 , Lahore --> not more than that OKIE
+
+Education SECTION : 
+1-neded to add Grade: A fpr the FSC Pre-Enginnering 
+2- achievments in the computer sciece : add that I get A grade in the the first year in Proogramming fundamentals and the OOP(Object oriented programming) subhect at BS CS and receievd a prize for this from the Ustadam 
+*become teaching assistant in the in the 4rth seester for the juniors in th Lab of the Programming fundamentals , 
+
+* For the FSC write get a top prize in the Sceince exhibition partcipated in the whol college getting first prize for it shows confidence 
+* get the poster competion 3rd prize acheieved for the 
+* get marks --> u can wrte 1000/1100 
+you can make the writing more correct the sentences you can make thm brief and make them easy to undertand and more effiecenyt
+
