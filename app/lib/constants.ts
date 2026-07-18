@@ -11,7 +11,7 @@ export const personalInfo = {
     "Backend Developer",
   ],
   tagline:
-    "Passionate developer building efficient and scalable mobile & web solutions",
+    "Passionate developer building efficient mobile & web solutions",
   summary:
     "I am a passionate developer with interests in Mobile App, .NET, Frontend, and Backend Development, focused on building efficient and scalable solutions. I aim to contribute to team success by collaborating with senior developers, continuously learning, and delivering high-quality work.",
   aboutDetailed: [
