@@ -1,17 +1,19 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
   const posRef = useRef({ x: 0, y: 0 });
   const ringPosRef = useRef({ x: 0, y: 0 });
+  const [isTouch] = useState(() =>
+    typeof window !== "undefined" && ("ontouchstart" in window || navigator.maxTouchPoints > 0)
+  );
+
+  if (isTouch) return null;
 
   useEffect(() => {
-    const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
-    if (isTouchDevice) return;
-
     const move = (e: MouseEvent) => {
       posRef.current = { x: e.clientX, y: e.clientY };
       if (cursorRef.current) {

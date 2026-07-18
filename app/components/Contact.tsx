@@ -41,81 +41,7 @@ export function Contact() {
       />
 
       <div className="grid gap-12 lg:grid-cols-2">
-        <AnimatedSection animation="fade-left">
-          <div className="space-y-6">
-            <p className="text-lg leading-relaxed text-muted-light">
-              I&apos;m currently open to new opportunities and always happy to
-              connect. Whether you have a project or a question, you can reach me out!
-            </p>
-
-            <div className="space-y-4">
-              <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <EmailIcon size={20} />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-foreground">Email</p>
-                  <a
-                    href={`mailto:${personalInfo.email}`}
-                    className="text-sm text-muted-light transition-colors hover:text-primary"
-                  >
-                    {personalInfo.email}
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <MapPinIcon size={20} />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-foreground">Location</p>
-                  <p className="text-sm text-muted-light">{contactInfo.location}</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <span className="text-lg font-bold">!</span>
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-foreground">Availability</p>
-                  <p className="text-sm text-muted-light">{contactInfo.availability}</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-4 pt-4">
-              <a
-                href={personalInfo.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-12 w-12 items-center justify-center rounded-lg border border-card-border bg-card text-muted transition-all duration-300 hover:border-primary hover:text-primary hover:shadow-md"
-                aria-label="GitHub"
-              >
-                <GithubIcon size={20} />
-              </a>
-              <a
-                href={personalInfo.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-12 w-12 items-center justify-center rounded-lg border border-card-border bg-card text-muted transition-all duration-300 hover:border-primary hover:text-primary hover:shadow-md"
-                aria-label="LinkedIn"
-              >
-                <LinkedinIcon size={20} />
-              </a>
-              <a
-                href={`mailto:${personalInfo.email}`}
-                className="flex h-12 w-12 items-center justify-center rounded-lg border border-card-border bg-card text-muted transition-all duration-300 hover:border-primary hover:text-primary hover:shadow-md"
-                aria-label="Email"
-              >
-                <EmailIcon size={20} />
-              </a>
-            </div>
-          </div>
-        </AnimatedSection>
-
-        <AnimatedSection animation="fade-right" delay={100}>
+        <AnimatedSection animation="fade-right" delay={100} className="lg:order-2">
           <form
             className="space-y-5 rounded-xl border border-card-border bg-card p-6 shadow-sm"
             onSubmit={handleSubmit}
@@ -202,6 +128,80 @@ export function Contact() {
               <div className="absolute inset-0 bg-gradient-to-r from-primary-dark to-secondary-dark opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </button>
           </form>
+        </AnimatedSection>
+
+        <AnimatedSection animation="fade-left" className="lg:order-1">
+          <div className="space-y-6">
+            <p className="text-lg leading-relaxed text-muted-light">
+              I&apos;m currently open to new opportunities and always happy to
+              connect. Whether you have a project or a question, you can reach me out!
+            </p>
+
+            <div className="space-y-4">
+              <div className="flex items-center gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <EmailIcon size={20} />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-foreground">Email</p>
+                  <a
+                    href={`mailto:${personalInfo.email}`}
+                    className="text-sm text-muted-light transition-colors hover:text-primary"
+                  >
+                    {personalInfo.email}
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <MapPinIcon size={20} />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-foreground">Location</p>
+                  <p className="text-sm text-muted-light">{contactInfo.location}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <span className="text-lg font-bold">!</span>
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-foreground">Availability</p>
+                  <p className="text-sm text-muted-light">{contactInfo.availability}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex gap-4 pt-4">
+              <a
+                href={personalInfo.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-12 w-12 items-center justify-center rounded-lg border border-card-border bg-card text-muted transition-all duration-300 hover:border-primary hover:text-primary hover:shadow-md"
+                aria-label="GitHub"
+              >
+                <GithubIcon size={20} />
+              </a>
+              <a
+                href={personalInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-12 w-12 items-center justify-center rounded-lg border border-card-border bg-card text-muted transition-all duration-300 hover:border-primary hover:text-primary hover:shadow-md"
+                aria-label="LinkedIn"
+              >
+                <LinkedinIcon size={20} />
+              </a>
+              <a
+                href={`mailto:${personalInfo.email}`}
+                className="flex h-12 w-12 items-center justify-center rounded-lg border border-card-border bg-card text-muted transition-all duration-300 hover:border-primary hover:text-primary hover:shadow-md"
+                aria-label="Email"
+              >
+                <EmailIcon size={20} />
+              </a>
+            </div>
+          </div>
         </AnimatedSection>
       </div>
     </SectionWrapper>

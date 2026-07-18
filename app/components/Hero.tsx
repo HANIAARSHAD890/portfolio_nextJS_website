@@ -45,11 +45,9 @@ export function Hero() {
   const [showOverlay, setShowOverlay] = useState(false);
   const [isPeeking, setIsPeeking] = useState(false);
   const peekTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const isTouchRef = useRef(false);
-
-  useEffect(() => {
-    isTouchRef.current = "ontouchstart" in window || navigator.maxTouchPoints > 0;
-  }, []);
+  const [isTouchDevice] = useState(() =>
+    typeof window !== "undefined" && ("ontouchstart" in window || navigator.maxTouchPoints > 0)
+  );
 
   const handlePeek = useCallback(() => {
     setIsPeeking(true);
@@ -59,8 +57,8 @@ export function Hero() {
   }, []);
 
   const handleImageClick = useCallback(() => {
-    if (isTouchRef.current) setShowOverlay(true);
-  }, []);
+    if (isTouchDevice) setShowOverlay(true);
+  }, [isTouchDevice]);
 
   return (
     <section
@@ -84,7 +82,7 @@ export function Hero() {
                     width={128}
                     height={128}
                     className={`h-full w-full rounded-full object-cover ${
-                      isPeeking ? "blur-0" : "blur-reveal"
+                      isPeeking || isTouchDevice ? "blur-0" : "blur-reveal"
                     }`}
                     onClick={handleImageClick}
                   />
