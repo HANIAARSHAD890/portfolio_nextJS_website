@@ -31,7 +31,7 @@ export function Header() {
           href="#hero"
           className="text-xl font-bold tracking-tight text-foreground transition-colors hover:text-primary"
         >
-          <span className="text-gradient">&lt;Hania /&gt;</span>
+          <span className="text-gradient">&lt;Hania.dev /&gt;</span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

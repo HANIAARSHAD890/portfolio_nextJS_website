@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import { personalInfo } from "../lib/constants";
-import { GithubIcon, LinkedinIcon, EmailIcon, DownloadIcon } from "../lib/icons";
+import { GithubIcon, LinkedinIcon, EmailIcon, DownloadIcon, EyeIcon } from "../lib/icons";
 import Image from "next/image";
 
 function useTyper(words: string[], speed = 80, deleteSpeed = 40, pause = 2000) {
@@ -42,6 +42,25 @@ function useTyper(words: string[], speed = 80, deleteSpeed = 40, pause = 2000) {
 
 export function Hero() {
   const typedText = useTyper(personalInfo.titles, 80, 40, 2000);
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [isPeeking, setIsPeeking] = useState(false);
+  const peekTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isTouchRef = useRef(false);
+
+  useEffect(() => {
+    isTouchRef.current = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+  }, []);
+
+  const handlePeek = useCallback(() => {
+    setIsPeeking(true);
+    setShowOverlay(false);
+    if (peekTimer.current) clearTimeout(peekTimer.current);
+    peekTimer.current = setTimeout(() => setIsPeeking(false), 10000);
+  }, []);
+
+  const handleImageClick = useCallback(() => {
+    if (isTouchRef.current) setShowOverlay(true);
+  }, []);
 
   return (
     <section
@@ -56,18 +75,36 @@ export function Hero() {
       <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8 flex-1 flex items-center justify-center">
         <div className="animate-fade-in-up">
           <div className="mb-6 flex justify-center">
-            <div className="group relative h-28 w-28 sm:h-32 sm:w-32">
+            <div className="relative h-28 w-28 sm:h-32 sm:w-32">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-accent p-[3px] shadow-lg shadow-primary/25">
                 <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-background">
                   <Image
-                    src="/images/profile_1.png"
+                    src="/images/profile_2.png"
                     alt="Profile"
                     width={128}
                     height={128}
-                    className="h-full w-full rounded-full object-cover"
+                    className={`h-full w-full rounded-full object-cover ${
+                      isPeeking ? "blur-0" : "blur-reveal"
+                    }`}
+                    onClick={handleImageClick}
                   />
                 </div>
               </div>
+
+              {showOverlay && (
+                <div
+                  className="absolute inset-0 z-20 flex cursor-pointer items-center justify-center rounded-full bg-foreground/60"
+                  onClick={() => setShowOverlay(false)}
+                >
+                  <button
+                    onClick={(e) => { e.stopPropagation(); handlePeek(); }}
+                    className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-gray-900 transition-transform duration-200 hover:scale-110"
+                    aria-label="View photo"
+                  >
+                    <EyeIcon size={18} />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
           <p className="mb-4 text-lg font-medium text-primary">Salam, I&apos;m</p>

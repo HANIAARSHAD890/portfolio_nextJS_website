@@ -22,7 +22,7 @@ export function Footer() {
         <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
           <div className="text-center md:text-left">
             <a href="#hero" className="text-xl font-bold tracking-tight text-foreground transition-colors hover:text-primary">
-              <span className="text-gradient">&lt;Hania /&gt;</span>
+              <span className="text-gradient">&lt;Hania.dev /&gt;</span>
             </a>
             <p className="mt-2 text-sm text-muted">
               Building the future, one line of code at a time.

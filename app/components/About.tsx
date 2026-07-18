@@ -22,11 +22,11 @@ export function About() {
             <div className="relative flex aspect-square items-center justify-center rounded-2xl bg-card border-2 border-primary/20 shadow-lg overflow-hidden p-1">
               <div className="h-full w-full rounded-xl overflow-hidden">
                   <Image
-                    src="/images/profile_2.png"
+                    src="/images/profile_1.png"
                     alt="About"
                     width={400}
                     height={400}
-                    className="h-full w-full object-cover rounded-xl blur-reveal"
+                    className="h-full w-full object-cover rounded-xl"
                   />
               </div>
             </div>

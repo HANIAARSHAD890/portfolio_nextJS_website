@@ -32,7 +32,7 @@ export function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-foreground transition-transform duration-200 hover:scale-110"
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-gray-900 transition-transform duration-200 hover:scale-110"
                       aria-label="View source code"
                     >
                       <GithubIcon size={18} />
@@ -43,7 +43,7 @@ export function Projects() {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-foreground transition-transform duration-200 hover:scale-110"
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-gray-900 transition-transform duration-200 hover:scale-110"
                       aria-label="View live demo"
                     >
                       <ExternalLink size={18} />

@@ -126,6 +126,13 @@ export const QuoteIcon: React.FC<IconProps> = ({ size = 32, className = "" }) =>
   </svg>
 );
 
+export const EyeIcon: React.FC<IconProps> = ({ size = 24, className = "" }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+    <circle cx="12" cy="12" r="3" />
+  </svg>
+);
+
 export const ChevronUp: React.FC<IconProps> = ({ size = 24, className = "" }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
     <polyline points="18 15 12 9 6 15" />

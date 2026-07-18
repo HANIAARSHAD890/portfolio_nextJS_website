@@ -100,13 +100,14 @@ export const projects = [
     github: "https://github.com/HANIAARSHAD890/RecipeBytesV2-MobileApp",
     live: "https://www.linkedin.com/posts/haniaarshad_recipebytes-mobile-app-ugcPost-7478639605601239040-wak4/",
     featured: true,
-    timeline: "2026",
+    timeline: "2026"
+    ,
   },
   {
     title: "Pilgrim Health Predictor",
     description:
       "AI-powered health monitoring system predicting conditions like dehydration, heat exhaustion, heatstroke, fatigue, and injury risks for Hajj & Umrah pilgrims. Implemented Decision Tree algorithm with Google Gemini API integration for intelligent health advisory.",
-    tech: ["Python", "Decision Tree", "Gemini API", "Streamlit", "Scikit-learn"],
+    tech: ["Python", "Gemini API", "Streamlit", "Scikit-learn"],
     image: "/images/projects/pilgrim.jpg",
     github: "https://github.com/HANIAARSHAD890/ARHajj-Augmented-Reality-AI-for-Hajj-",
     live: "https://www.linkedin.com/posts/haniaarshad_pilgrim-health-predictor-excited-to-share-activity-7334241158333628416-SgCN/",
@@ -139,8 +140,26 @@ export const projects = [
 
 export const experiences = [
   {
+  company: "Devanics",
+  role: "Flutter Developer",
+  type: "Internship",
+  period: "July 2026 - Present",
+  location: "Lahore",
+  description: [
+    "Developing Flutter applications using clean architecture principles",
+    "Integrated RESTful APIs and using Provider for State Management",
+    "Implemented responsive UIs from Figma designs",
+    "Integrated Stripe payment workflows and Google Cloud service", 
+    "Collaborated in team discussions through standups" 
+  ],
+
+  tech: ["Flutter", "Dart", "REST API", "Postman", "Figma", "Firebase", "Stripe"],
+
+},
+  {
     company: "UET KICS (Game Studio)",
-    role: "Flutter Intern",
+    role: "Flutter Developer",
+    type: "Hybrid",
     period: "Mar 2025 - July 2025",
     location: "Lahore",
     description: [
@@ -153,8 +172,22 @@ export const experiences = [
   },
   {
     company: "BillNow",
+     type: "Hybird",
     role: "Junior Software Engineer",
     period: "June 2024 - Oct 2024",
+    location: "Lahore",
+    description: [
+      "Developed backend APIs using .NET Core framework and tested them using Swagger Codegen",
+      "Wrote clean code, implemented stored procedures, and managed SQL databases",
+      "Collaborated with senior developers to implement new features and fix issues",
+    ],
+    tech: [".NET Core", "C#", "SQL", "Swagger"],
+  },
+  {
+    company: "UET Lahore",
+     type: "Volunteer",
+    role: "Teaching Assistant",
+    period: "Mar 2025 - May 2025",
     location: "Lahore",
     description: [
       "Developed backend APIs using .NET Core framework and tested them using Swagger Codegen",
@@ -196,7 +229,7 @@ export const education = [
     marks: "1000/1100",
     achievements: [
       "Grade A — 1000/1100 marks",
-      "Won first prize in the college-wide Science Exhibition for outstanding project presentation",
+      "Won first prize in the college-wide Science Exhibition",
       "Secured 3rd prize in Poster Competition",
     ],
     courses: [
