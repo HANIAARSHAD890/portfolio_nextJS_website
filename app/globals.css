@@ -161,10 +161,13 @@
 }
 
 @utility blur-reveal {
-  filter: blur(12px);
+  filter: blur(0);
   transition: filter 0.5s ease;
-  &:hover {
-    filter: blur(0);
+  @media (hover: hover) and (pointer: fine) {
+    filter: blur(12px);
+    &:hover {
+      filter: blur(0);
+    }
   }
 }
 

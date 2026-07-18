@@ -63,17 +63,28 @@ export function Header() {
         className={`fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-background transition-all duration-300 md:hidden ${
           isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
+        onClick={() => setIsMobileMenuOpen(false)}
       >
-        {navLinks.map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="text-2xl font-medium text-foreground transition-colors hover:text-primary"
-          >
-            {link.label}
-          </a>
-        ))}
+        <button
+          onClick={(e) => { e.stopPropagation(); setIsMobileMenuOpen(false); }}
+          className="absolute top-6 right-6 flex h-10 w-10 items-center justify-center rounded-lg border border-card-border text-foreground transition-colors hover:border-primary hover:text-primary"
+          aria-label="Close menu"
+        >
+          <CloseIcon size={20} />
+        </button>
+
+        <div onClick={(e) => e.stopPropagation()}>
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block py-3 text-center text-2xl font-medium text-foreground transition-colors hover:text-primary"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
       </div>
     </header>
   );
