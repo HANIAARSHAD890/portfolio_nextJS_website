@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback, useRef } from "react";
+import { useEffect, useState, useCallback, useRef, useLayoutEffect } from "react";
 import { personalInfo } from "../lib/constants";
 import { GithubIcon, LinkedinIcon, EmailIcon, DownloadIcon, EyeIcon } from "../lib/icons";
 import Image from "next/image";
@@ -42,12 +42,16 @@ function useTyper(words: string[], speed = 80, deleteSpeed = 40, pause = 2000) {
 
 export function Hero() {
   const typedText = useTyper(personalInfo.titles, 80, 40, 2000);
-  const [isTouch] = useState(() =>
-    typeof window !== "undefined" && ("ontouchstart" in window || navigator.maxTouchPoints > 0)
-  );
-  const [showOverlay, setShowOverlay] = useState(isTouch);
+  const [isTouch, setIsTouch] = useState(true);
+  const [showOverlay, setShowOverlay] = useState(true);
   const [isPeeking, setIsPeeking] = useState(false);
   const peekTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useLayoutEffect(() => {
+    const touch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    setIsTouch(touch);
+    if (!touch) setShowOverlay(false);
+  }, []);
 
   const handlePeek = useCallback(() => {
     setIsPeeking(true);
