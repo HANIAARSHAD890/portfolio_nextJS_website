@@ -111,7 +111,7 @@ export const projects = [
     image: "/images/projects/pilgrim.jpg",
     github: "https://github.com/HANIAARSHAD890/ARHajj-Augmented-Reality-AI-for-Hajj-",
     live: "https://www.linkedin.com/posts/haniaarshad_pilgrim-health-predictor-excited-to-share-activity-7334241158333628416-SgCN/",
-    featured: true,
+    featured: false,
     timeline: "2025",
   },
   {
