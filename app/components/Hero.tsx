@@ -42,7 +42,10 @@ function useTyper(words: string[], speed = 80, deleteSpeed = 40, pause = 2000) {
 
 export function Hero() {
   const typedText = useTyper(personalInfo.titles, 80, 40, 2000);
-  const [showOverlay, setShowOverlay] = useState(false);
+  const [isTouch] = useState(() =>
+    typeof window !== "undefined" && ("ontouchstart" in window || navigator.maxTouchPoints > 0)
+  );
+  const [showOverlay, setShowOverlay] = useState(isTouch);
   const [isPeeking, setIsPeeking] = useState(false);
   const peekTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -50,12 +53,15 @@ export function Hero() {
     setIsPeeking(true);
     setShowOverlay(false);
     if (peekTimer.current) clearTimeout(peekTimer.current);
-    peekTimer.current = setTimeout(() => setIsPeeking(false), 10000);
-  }, []);
+    peekTimer.current = setTimeout(() => {
+      setIsPeeking(false);
+      if (isTouch) setShowOverlay(true);
+    }, 10000);
+  }, [isTouch]);
 
   const handleImageClick = useCallback(() => {
-    setShowOverlay(true);
-  }, []);
+    if (!isTouch) setShowOverlay(true);
+  }, [isTouch]);
 
   return (
     <section
@@ -79,7 +85,7 @@ export function Hero() {
                     width={128}
                     height={128}
                     className={`h-full w-full rounded-full object-cover ${
-                      isPeeking ? "blur-0" : "blur-reveal"
+                      isTouch ? "" : isPeeking ? "blur-0" : "blur-reveal"
                     }`}
                     onClick={handleImageClick}
                   />
@@ -89,7 +95,7 @@ export function Hero() {
               {showOverlay && (
                 <div
                   className="absolute inset-0 z-20 flex cursor-pointer items-center justify-center rounded-full bg-foreground/60"
-                  onClick={() => setShowOverlay(false)}
+                  onClick={() => { if (!isTouch) setShowOverlay(false); }}
                 >
                   <button
                     onClick={(e) => { e.stopPropagation(); handlePeek(); }}

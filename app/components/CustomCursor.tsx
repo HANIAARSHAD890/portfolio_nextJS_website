@@ -7,13 +7,15 @@ export function CustomCursor() {
   const ringRef = useRef<HTMLDivElement>(null);
   const posRef = useRef({ x: 0, y: 0 });
   const ringPosRef = useRef({ x: 0, y: 0 });
-  const [isTouch] = useState(() =>
-    typeof window !== "undefined" && ("ontouchstart" in window || navigator.maxTouchPoints > 0)
-  );
-
-  if (isTouch) return null;
+  const [isTouch, setIsTouch] = useState(true);
 
   useEffect(() => {
+    setIsTouch("ontouchstart" in window || navigator.maxTouchPoints > 0);
+  }, []);
+
+  useEffect(() => {
+    if (isTouch) return;
+
     const move = (e: MouseEvent) => {
       posRef.current = { x: e.clientX, y: e.clientY };
       if (cursorRef.current) {
@@ -39,7 +41,9 @@ export function CustomCursor() {
       window.removeEventListener("mousemove", move);
       cancelAnimationFrame(rafRef);
     };
-  }, []);
+  }, [isTouch]);
+
+  if (isTouch) return null;
 
   return (
     <>
