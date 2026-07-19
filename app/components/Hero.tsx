@@ -60,8 +60,14 @@ export function Hero() {
   }, [isTouch]);
 
   const handleImageClick = useCallback(() => {
-    if (!isTouch) setShowOverlay(true);
-  }, [isTouch]);
+    if (isTouch && isPeeking) {
+      if (peekTimer.current) clearTimeout(peekTimer.current);
+      setIsPeeking(false);
+      setShowOverlay(true);
+    } else if (!isTouch) {
+      setShowOverlay(true);
+    }
+  }, [isTouch, isPeeking]);
 
   return (
     <section
